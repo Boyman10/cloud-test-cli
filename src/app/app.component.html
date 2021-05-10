@@ -1,2 +1,9 @@
-<h1>Hello Cloud Test</h1>
+<!-- your navs bound to current route fragments -->
+<ul ngbNav [activeId]="route.fragment | async" class="nav-tabs">
+  <li [ngbNavItem]="link.fragment" *ngFor="let link of links">
+    <a ngbNavLink routerLink="." [fragment]="link.fragment">{{ link.title }}</a>
+  </li>
+</ul>
 
+<!-- and an actual outlet elsewhere -->
+<router-outlet></router-outlet>
