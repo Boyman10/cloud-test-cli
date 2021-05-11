@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'cloud-test-cli';
+  public isMenuCollapsed = true;
+  public title:string = "CloudTest App";
 }

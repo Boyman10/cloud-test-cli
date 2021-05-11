@@ -23,7 +23,7 @@ describe('AppComponent', () => {
   it(`should have as title 'cloud-test-cli'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('cloud-test-cli');
+    expect(app.title).toEqual('CloudTest App');
   });
 
   it('should render title', () => {
