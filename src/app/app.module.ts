@@ -7,6 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { JournalComponent } from './journal/journal.component';
 import { HomeComponent } from './view/home/home.component';
 import { AddEntryComponent } from './journal/add-entry/add-entry.component';
+import {HttpClientModule} from "@angular/common/http";
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { AddEntryComponent } from './journal/add-entry/add-entry.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule
+    NgbModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
