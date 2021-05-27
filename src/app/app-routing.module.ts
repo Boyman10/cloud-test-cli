@@ -3,13 +3,14 @@ import { Routes, RouterModule } from '@angular/router';
 import {JournalComponent} from "./journal/journal.component";
 import {HomeComponent} from "./view/home/home.component";
 import {AddEntryComponent} from "./journal/add-entry/add-entry.component";
-import {AuthGuard} from "./services/auth-guard.service";
+import {CustomAuthGuard} from "./services/custom-auth-guard.service";
+import {AuthGuard} from "./guard/auth.guard";
 
 const routes: Routes = [
   {
     path: 'journal',
     component: JournalComponent,
-    canActivate: [AuthGuard]
+    canActivate: [CustomAuthGuard]
   },
   {
     path: 'add-entry',

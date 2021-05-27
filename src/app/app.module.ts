@@ -1,5 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {APP_INITIALIZER, NgModule} from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +8,8 @@ import { JournalComponent } from './journal/journal.component';
 import { HomeComponent } from './view/home/home.component';
 import { AddEntryComponent } from './journal/add-entry/add-entry.component';
 import {HttpClientModule} from "@angular/common/http";
+import {KeycloakService} from "keycloak-angular";
+import {initializeKeycloak} from "./init/keycloak-init.factory";
 
 @NgModule({
   declarations: [
@@ -22,7 +24,14 @@ import {HttpClientModule} from "@angular/common/http";
     NgbModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    {
+      provide: APP_INITIALIZER,
+      useFactory: initializeKeycloak,
+      multi: true,
+      deps: [KeycloakService],
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
