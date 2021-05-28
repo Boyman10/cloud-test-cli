@@ -8,7 +8,7 @@ import { JournalComponent } from './journal/journal.component';
 import { HomeComponent } from './view/home/home.component';
 import { AddEntryComponent } from './journal/add-entry/add-entry.component';
 import {HttpClientModule} from "@angular/common/http";
-import {KeycloakService} from "keycloak-angular";
+import {KeycloakAngularModule, KeycloakService} from "keycloak-angular";
 import {initializeKeycloak} from "./init/keycloak-init.factory";
 
 @NgModule({
@@ -22,7 +22,8 @@ import {initializeKeycloak} from "./init/keycloak-init.factory";
     BrowserModule,
     AppRoutingModule,
     NgbModule,
-    HttpClientModule
+    HttpClientModule,
+    KeycloakAngularModule,
   ],
   providers: [
     {
