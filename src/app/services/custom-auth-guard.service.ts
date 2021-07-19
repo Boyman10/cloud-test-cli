@@ -1,4 +1,4 @@
-import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+/*import {ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
 import {Observable} from 'rxjs';
 import {Injectable} from '@angular/core';
 
@@ -15,3 +15,4 @@ export class CustomAuthGuard implements CanActivate{
       return false;
   }
 }
+*/
